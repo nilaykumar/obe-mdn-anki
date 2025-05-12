@@ -1,0 +1,62 @@
+/* taken from the HSK decks */
+
+.card {
+    font-family: arial;
+    font-size: 18px;
+    text-align: center;
+    float: center;
+    word-wrap: break-word;
+}
+
+/*.card2 { background-color: #fffac7;}*/
+/*.card4 { background-color: #fffac7;}*/
+
+.cardtype { font-size: 14pt; }
+.zh     { font-family: myfont; }
+.zh_l   {
+    font-family: myfont;
+    font-size: 42px; }
+.zh_s   {
+    font-family: myfont;
+    font-size: 26px;
+    color:gray; }
+.aid    { font-size: 25px; font-family: myfont; }
+.cmt    { font-size: 20px; color:gray;}
+.hint   { font-size:12pt; color: red; }
+.mng    { font-size: 20px; }
+.note   { font-size:12pt}
+.pin    { font-size: 20px}
+.silh   { font-size:24pt;}
+.tags   { font-size: 10pt; line-height: 1.4; color: gray;
+    width: min-content; text-align: right;
+    position: fixed; bottom: 2pt; right: 2pt; }
+
+.tone1 {color: red;}
+.tone2 {color: orange;}
+.tone3 {color: green;}
+.tone4 {color: blue;}
+.tone5 {color: gray;}
+
+mark {
+    background-color: gray;
+    color: white;
+}
+ol {
+    margin: 0 auto; padding: 0;
+    max-width:100%; width:max-content;
+    counter-reset: item;
+}
+ol li { display: block; }
+li {
+    list-style-position: inside;
+    margin: 0 1em; padding:2pt 5pt;
+}
+li+li { border-top: 1px dotted grey; }
+ol li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    font-weight: bold;
+}
+l { display:inline-block; }
+
+@font-face { font-family: myfont; src: url('_kaiti.ttf'); }

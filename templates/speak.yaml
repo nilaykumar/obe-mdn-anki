@@ -1,0 +1,16 @@
+- name: OBE MDN Speak
+  qfmt: |
+    <ol class=mng>{{meaning}}</ol>
+    <div class=silh>{{silhouette}}</div>
+  afmt: |
+    {{FrontSide}}
+
+    <hr id=answer>
+
+    <div class=pin><b>{{pinyin}}</b></div>
+    {{#simplified}}
+      <div class=zh_l>{{simplified}}</div>
+    {{/simplified}}
+    {{#traditional}}
+      <div class=zh_s>{{traditional}}</div>
+    {{/traditional}}

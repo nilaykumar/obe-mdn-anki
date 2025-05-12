@@ -1,0 +1,14 @@
+- name: OBE MDN Read
+  qfmt: |
+    {{#simplified}}
+      <div class=pin style="opacity:0">{{pinyin}}</div>
+      <div class=zh_l>{{simplified}}</div>
+    {{/simplified}}
+  afmt: |
+    <div class=pin>{{pinyin}}</div>
+    <div class=zh_l>{{simplified}}</div>
+    <div class=zh_s>{{traditional}}</div>
+
+    <hr id=answer>
+
+    <ol class=mng>{{meaning}}</ol>
