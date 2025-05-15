@@ -15,7 +15,6 @@ def process_pinyin(s: str) -> str:
     result = s
     words = re.finditer(r"([a-z|\u00fc]+[1-4])", s)
     for word_match in words:
-        print(word_match)
         word = word_match.group(0)
         tone = int(word[-1])
         m = re.search("[aoeiuv\u00fc]+", word)
