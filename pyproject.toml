@@ -9,5 +9,6 @@ dependencies = [
     "genanki>=0.13.1",
     "polars>=1.29.0",
     "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
     "ruff>=0.11.9",
 ]

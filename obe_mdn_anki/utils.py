@@ -13,11 +13,12 @@ py_tone_mark = {
 def process_pinyin(s: str) -> str:
     s = s.lower()
     result = s
-    words = re.finditer(r"([a-z]+[1-4])", s)
+    words = re.finditer(r"([a-z|\u00fc]+[1-4])", s)
     for word_match in words:
+        print(word_match)
         word = word_match.group(0)
         tone = int(word[-1])
-        m = re.search("[aoeiu]+", word)
+        m = re.search("[aoeiuv\u00fc]+", word)
         assert m is not None, f"Could not process pinyin {word}!"
         if len(m.group(0)) == 1:
             word = (
@@ -42,11 +43,7 @@ def process_pinyin(s: str) -> str:
 
 
 if __name__ == "__main__":
-    cases = [
-        "da4 piao4 liang guo2 (slang)",
-        "fǎ guó (Taiwan: fà guó)",
-        "fǎ guó (Taiwan: fa4 guo2)",
-    ]
+    cases = ["nv4", "nü4"]
     for case in cases:
         print(case)
         print("\t>", process_pinyin(case))
