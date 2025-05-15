@@ -3,6 +3,7 @@
     {{#simplified}}
       <div class=pin style="opacity:0">{{pinyin}}</div>
       <div class=zh_l>{{simplified}}</div>
+      <div class=zh_s>{{traditional}}</div>
     {{/simplified}}
   afmt: |
     <div class=pin>{{pinyin}}</div>
