@@ -39,10 +39,3 @@ def process_pinyin(s: str) -> str:
         word = word[:-1]
         result = result.replace(word_match.group(0), word)
     return result
-
-
-if __name__ == "__main__":
-    cases = ["nv4", "nü4"]
-    for case in cases:
-        print(case)
-        print("\t>", process_pinyin(case))
