@@ -32,3 +32,8 @@ Then, generate the Anki deck `output.apkg` from an input `data-file.csv` using:
 ```sh
 uv run obe_mdn_anki/generate_deck.py data-file.csv output.apkg
 ```
+
+## Known issues
+
+- The silhouette field includes whitespace and punctuation (e.g. question marks
+  contribute an extra charactr of silhouette at the end of a speak prompt).
