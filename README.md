@@ -20,3 +20,15 @@ decks here: https://ankiweb.net/shared/info/1598233731.
 Each vocabulary term corresponds to two cards: a `read` card and a `speak` card.
 The `read` card consists of written Mandarin to be read (reading and meaning),
 while the `speak` card consists of English to be translated into Mandarin.
+
+## Usage
+
+Clone the repo and install the dependencies. If using `uv`, for instance:
+```sh
+uv sync
+```
+
+Then, generate the Anki deck `output.apkg` from an input `data-file.csv` using:
+```sh
+uv run obe_mdn_anki/generate_deck.py data-file.csv output.apkg
+```
