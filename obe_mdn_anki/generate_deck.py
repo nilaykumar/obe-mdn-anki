@@ -2,11 +2,11 @@ import fire
 import polars as pl
 import genanki as ga
 from models import ReadModel, ReadDeck, SpeakDeck, SpeakModel
-from utils import process_pinyin
+from utils import process_pinyin, check_dupes
 import html
 
 
-def main(vocab_file: str, output_apkg: str):
+def main(vocab_file: str, output_apkg: str) -> None:
     """Generates an Anki deck from CSV vocab list.
 
     Arguments:
@@ -20,6 +20,7 @@ def main(vocab_file: str, output_apkg: str):
     speak_deck = SpeakDeck()
 
     df = pl.read_csv(vocab_file).fill_null("")
+    check_dupes(df)
     print(f"Writing {len(df)} read and speak flash cards each")
     for row in df.iter_rows():
         si, tr, py, mn = row

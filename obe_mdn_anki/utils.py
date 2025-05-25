@@ -1,4 +1,5 @@
 # adapted from https://stackoverflow.com/questions/8200349/convert-numbered-pinyin-to-pinyin-with-tone-marks
+import polars as pl
 import re
 
 py_tone_mark = {
@@ -39,3 +40,10 @@ def process_pinyin(s: str) -> str:
         word = word[:-1]
         result = result.replace(word_match.group(0), word)
     return result
+
+
+def check_dupes(df: pl.DataFrame, col: str = "simplified") -> None:
+    dupes = df.filter(pl.col(col).is_duplicated())
+    if not dupes.is_empty():
+        print("Duplicate entries found in the simplified column:")
+        print(dupes)
