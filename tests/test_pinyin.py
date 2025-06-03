@@ -10,6 +10,8 @@ from obe_mdn_anki.utils import process_pinyin
         ("fǎ guó (Taiwan: fa4 guo2)", "fǎ guó (taiwan: fà guó)"),
         ("nv4", "nǜ"),
         ("nü4", "nǜ"),
+        ("niu3", "niǔ"),
+        ("nui2", "nuí"),
     ],
 )
 def test_pinyin(s, expected):

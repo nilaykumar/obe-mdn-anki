@@ -33,9 +33,9 @@ def process_pinyin(s: str) -> str:
                 word = word.replace("o", py_tone_mark[tone][1])
             elif "e" in word:
                 word = word.replace("e", py_tone_mark[tone][2])
-            elif word.endswith("ui"):
+            elif word[:-1].endswith("ui"):
                 word = word.replace("i", py_tone_mark[tone][3])
-            elif word.endswith("iu"):
+            elif word[:-1].endswith("iu"):
                 word = word.replace("u", py_tone_mark[tone][4])
         word = word[:-1]
         result = result.replace(word_match.group(0), word)
